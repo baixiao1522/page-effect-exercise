@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统计数字</title>
+    <script>
+        /*通过prompt对话框输入5个数字，
+        然后计算平均值、最小值、最大值和总和（中等）
+         * */
+        var avg=0,min=0,max=0,sum=0;
+        for(var i = 0 ; i < 5 ; i++){
+            var num = parseInt(prompt("请输入第" + (i + 1) +"个数字："));
+            if(i == 0) min = num;       //设置最小值等于第一个输入的数字
+            sum = sum + num;            //累加数字
+            if(num > max) max = num;    //确定最大值
+            if(num < min) min = num;    //确定最小值
+        }
+        alert('总和：' + sum);
+        alert('平均值：' + sum/5);
+        alert('最大值：' + max);
+        alert('最小值：' + min);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

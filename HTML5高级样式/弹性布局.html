@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性布局</title>
+    <style>
+        body{
+            display: flex;
+        }
+        div{height:200px;float:left;}
+        #d1,#d3{
+            width:200px;
+            background: yellow;
+        }
+        #d2{
+            flex:1; /*元素占用的空间比例*/
+            background: blue;
+        }
+        #d21{
+            flex:2;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="d1">页面第一区域</div>
+<div id="d2">页面第二区域</div>
+<div id="d21">页面第二一区域</div>
+<div id="d3">页面第三区域</div>
+</body>
+</html>

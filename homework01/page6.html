@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒三角</title>
+    <script>
+        for(var i = 0; i < 10 ; i++){
+//          for(var j = 10 - i ; j  > 0 ; j--){
+            for(var j = 0; j < 10 - i;j++){
+                document.write('*&nbsp;');
+            }
+            document.write("<br/>")
+        }
+        for(var i = 0; i < 10 ; i++){
+            for(var j = 0; j <= i;j++){
+                document.write('*&nbsp;');
+            }
+            document.write("<br/>")
+        }
+//        i:0    j:10   j = 10 - i
+//        i:1    j:9
+//        i:2    j:8
+//        i:9    j:1
+    </script>
+</head>
+<body style="text-align: center">
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义超链接</title>
+    <style>
+        .mytitle{
+            width:120px;
+            height:30px;
+            line-height: 30px;
+            font-size:1em;
+            border:1px solid #ccc;
+            position:absolute;
+        }
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+        $(function(){
+            //1.找到超链接，注册mouseover事件
+            //2.获取超链接的title
+            //3.DOM创建新节点，设置样式
+            //4.把新节点添加到页面中，并且设置位置在鼠标边上，并且删除超链接的title
+            //5.注册mouseout事件
+            //6.获取新节点的title，并且添加到超链接中
+            //7.删除新节点
+            $('#mylink').mouseover(function(evt){
+                var $title = $(this).attr('title');
+                var $newTitle = $('<p></p>');
+                $newTitle.html($title);
+                $newTitle.addClass('mytitle');
+                $($newTitle).offset({left:evt.clientX,top:evt.clientY})
+                $(this).removeAttr('title')
+                $('body').append($newTitle);
+            })
+            $('#mylink').mouseout(function(){
+                var $title = $('p').html()
+                $(this).attr('title',$title);
+                $('p').remove();
+            })
+        })
+    </script>
+</head>
+<body>
+<a id="mylink" href="#" title ='这是我的超链接'>首页</a>
+</body>
+</html>

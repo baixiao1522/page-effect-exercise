@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        th,td{
+            border:1px solid black;
+            border-collapse: collapse;
+            padding:10px;
+        }
+        a{text-decoration: none;}
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+        $(function(){
+            $('a[title="delete"]').click(function(){
+                $(this).parent().parent().remove();
+            });
+            $('#all').change(function(){
+                $('[type="checkbox"]').attr('checked',this.checked)
+            })
+            $('[title="add"]').click(function(){
+                var newNode = $('tr:last').clone(true);
+                $('table').append(newNode);
+            })
+            $('[title="delSelect"]').click(function(){
+                $('td [type="checkbox"]:checked').parent().parent().remove();
+            })
+
+            $('[class="btnSub"]').click(function(){
+                var number = $(this).next().val();
+                $(this).next().val(number - 1);
+            })
+            $('[class="btnAdd"]').click(function(){
+                var number = parseInt($(this).prev().val());
+                $(this).prev().val(number + 1);
+            })
+        })
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <th><input id="all" type="checkbox"/>全选</th>
+        <th>商品信息</th>
+        <th>易美惠价</th>
+        <th>数量</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/></td>
+        <td><a href="#">天堂直供彩虹伞</a></td>
+        <td>￥32.9</td>
+        <td>
+            <input class="btnSub" type="button" value="-"/>
+            <input type="text"  value="1"/>
+            <input class="btnAdd" type="button" value="+"/>
+        </td>
+        <td><a href="javascript:" title="delete">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/></td>
+        <td><a href="#">苹果手机Iphone5</a></td>
+        <td>￥3999</td>
+        <td>
+            <input class="btnSub" type="button" value="-"/>
+            <input type="text" value="1"/>
+            <input class="btnAdd" type="button" value="+"/>
+        </td>
+        <td><a href="javascript:" title="delete">删除</a></td>
+    </tr>
+</table>
+<a href="javascript:" title="add">新增</a>
+<a href="javascript:" title="delSelect">删除</a>
+</body>
+</html>

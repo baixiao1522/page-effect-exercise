@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统计成绩练习</title>
+    <script>
+        /*（1）输入考试科目的数量，
+        要求数量必须是非零、非负数的数值类型，否则给出相应提示并退出程序
+         （2）根据考试科目的数量，输入各科的考试成绩并累加，
+         要求成绩必须是非负数的数值类型，否则给出相应提示并退出程序
+         （3）如果各项输入正确，则弹出总成绩 。
+         * */
+        var sum = 0;
+        //1.接收输入的考试科目数量
+          var num = prompt('请输入考试科目的数量：');
+        //2.判断（1）非零（2）非负数(3)数值类型 if(num>0 && isNaN(num)) {}else
+        //3.判断结果处理（1）提示错误，并结束（2）继续往下
+        if(num == ''){
+            alert('您没有输入，不能统计，再见！');
+        } else if(isNaN(num)){
+            alert('您输入的不是数字，不能统计，再见！')
+        }else{
+            num = parseInt(num);
+            if(num >0){
+                //4.循环接收输入的课程成绩
+                 for(var i = 0 ; i < num ; i++){
+                     var score;
+                     //通过死循环，接收输入成绩，并判断合法性，合法退出循环，否则继续执行循环
+                    for(var j = 0; j < 10;){
+                        //4.1.判断成绩数值是否有效非负数
+                        score = parseInt(prompt('请输入第' + (i+1)  + '门课程成绩'));
+                        if(score >= 0)
+                        {
+                            break;
+                        }else{
+                            alert('成绩必须大等于0！');
+                        }
+                    }
+                     //4.2.累加成绩
+                     sum += score;
+                 }
+                //5.显示输出
+                alert('您的成绩总和：' + sum);
+            }else{
+                alert('您输入的数字不合理，请检查，再见！')
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

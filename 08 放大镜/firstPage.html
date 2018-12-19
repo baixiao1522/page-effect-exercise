@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- #include file = "one.html" -->
+<html>
+<head>
+	<title>My First WebPage!</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	*{padding:0px;margin:0px;}
+	ul{list-style-type: none;}
+	ul li {float:left;padding:10px;border-right:1px solid #ddd;width:120px;height:150px;position: relative;	
+	}
+	.focus{width:120px;height:150px;background-color:rgba(250,250,250,0.25);
+		position: absolute;top:10px;left:10px;border:1px #333 dashed;display: none;}
+	.focus:before{width:120px;height:120px;position: absolute;top:15px;left:-1px;border-left:1px white solid;border-right:1px white solid;content:'';}
+	.focus:after{width:100px;height:150px;position: absolute;left:10px;bottom:-1px;border-top:1px white solid;border-bottom:1px white solid;content:'';}
+	ul li:hover .focus{display: block}
+	#noborder{border-right:0px none;}
+	</style>
+<body>
+	<ul>
+	<li><a href="#"><img src="1.png"/><p class="focus"></p></a></li>
+	<li><a href="#"><img src="2.png"/><p class="focus"></p></a></li>
+	<li><a href="#"><img src="3.png"/><p class="focus"></p></a></li>
+	<li id="noborder"><a href="#"><img src="4.png"/><p class="focus"></p></a></li>
+	</ul>
+</body>
+</html>

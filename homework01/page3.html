@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闰年判断</title>
+    <script>
+        var year = parseInt(prompt("请输入年份："))
+        if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+            alert('这个年份是闰年');
+        }else{
+            alert('这个年份不是闰年');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

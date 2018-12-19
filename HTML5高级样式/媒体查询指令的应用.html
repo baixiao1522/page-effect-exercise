@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>媒体查询指令的应用</title>
+    <style>
+        div{
+            width:50%;
+            height: 200px;
+        }
+        @media screen and (min-width: 1024px){
+            #d1{
+                float:left;
+                background: yellow;
+            }
+            #d2{
+                float:left;
+                background: blue;
+            }
+        }
+        @media screen and (min-width: 600px) and (max-width: 1024px){
+            #d1{
+                float:left;
+                background: green;
+            }
+            #d2{
+                float:left;
+                background: red;
+            }
+        }
+        @media screen and (max-width: 600px){
+            #d1{
+                float:none;
+                width:100%;
+                background: pink;
+            }
+            #d2{
+                float:none;
+                width:100%;
+                background: gold;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="d1"></div>
+<div id="d2"></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画练习</title>
+    <style>
+        @keyframes transFormAnimation {
+            100%{
+                -webkit-transform: translateX(400px) rotate(720deg) scale(2);
+                box-shadow:5px 5px 8px 0 #000;
+            }
+        }
+        #d1{
+            width: 100px;
+            height: 100px;
+            background: orange;
+            animation: transFormAnimation 5s linear;
+            animation-fill-mode: forwards;/*结束后停止，不还原*/
+        }
+    </style>
+</head>
+<body>
+<div id="d1"></div>
+</body>
+</html>

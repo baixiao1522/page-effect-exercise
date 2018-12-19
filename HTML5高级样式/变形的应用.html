@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变形的应用</title>
+    <style>
+        #d1{
+            margin-left:200px;
+            margin-top:200px;
+            width: 300px;
+            height: 100px;
+            background: yellow;
+            /*!*-webkit-transform:translate(200px,100px);*!*/
+            /*!*-webkit-transform:scale(0.5);*!*/
+            -webkit-transform:rotate(45deg); /*原来的形状不变，旋转*/
+            -webkit-transform-origin:left top;
+        }
+        #d2{
+            margin-left:200px;
+            margin-top:200px;
+            width: 300px;
+            height: 100px;
+            background: red;
+            -webkit-transform:skew(45deg);
+        }
+    </style>
+</head>
+<body>
+<div id="d1"></div>
+<div id="d2"></div>
+</body>
+</html>

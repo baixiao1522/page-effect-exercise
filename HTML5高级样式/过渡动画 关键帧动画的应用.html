@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡动画的应用</title>
+    <style>
+        @keyframes myAnimate {
+            0%{
+                background: red;
+            }
+            10%{
+                background: green;
+            }
+            40%{
+                background: yellow;
+            }
+            70%{
+                background: pink;
+            }
+            100%{
+                background: gold;
+            }
+        }
+        #d1{
+            width:100px;
+            height: 100px;
+            background: yellow;
+            -webkit-transition:all 4s linear;
+        }
+        #d2{
+            width:200px;
+            height: 200px;
+            border:1px solid #ccc;
+            animation: myAnimate 10s linear;
+        }
+    </style>
+</head>
+<body>
+<div id="d2"></div>
+<div id="d1"></div>
+<form action="">
+    <input type="button" value="改变宽度" onclick="change()">
+</form>
+<script>
+    function change(){
+        document.getElementById('d1').style.width = '400px';
+        document.getElementById('d1').style.height = '300px';
+    }
+</script>
+</body>
+</html>

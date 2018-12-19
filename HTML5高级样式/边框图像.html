@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>边框图像</title>
+    <style>
+        #d1{
+            width: 300px;
+            height: 300px;
+            border:1px solid blue;
+            /*border-image: url(border.jpg) 26/52px repeat;*/
+            border-image-source: url(border.jpg);
+            border-image-slice: 26;     /*截取图片的尺寸*/
+            border-image-width: 26px;   /*实际大小*/
+            border-image-repeat: round; /*四舍五入*/
+        }
+        #menu{
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            line-height:30px;
+            border:1px solid #000;
+            border-image: url(border1.jpg) 5/10px round;
+        }
+    </style>
+</head>
+<body>
+<div id="d1"></div>
+<div id="menu">首页</div>
+</body>
+</html>
